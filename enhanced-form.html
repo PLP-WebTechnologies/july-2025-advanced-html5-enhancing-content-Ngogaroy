@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced HTML5 Form Assignment</title>
+  <style>
+    /* Basic styling for readability */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header, main, footer {
+      margin-bottom: 2rem;
+    }
+    h1, h2 {
+      color: #0056a6;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      width: auto;
+      background: #0056a6;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin-top: 1rem;
+    }
+    input[type="submit"]:hover {
+      background: #003d73;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page Header -->
+  <header>
+    <h1>Enhanced HTML5 Page</h1>
+    <p>This page demonstrates <strong>lists, tables, media</strong>, and a complete <strong>HTML5 form</strong>.</p>
+  </header>
+
+  <main>
+    <!-- ==================== LISTS SECTION ==================== -->
+    <section>
+      <h2>Favorite Programming Languages (Lists)</h2>
+
+      <!-- Unordered list -->
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>C++</li>
+      </ul>
+
+      <!-- Ordered list -->
+      <h3>Steps to Submit Assignment (Ordered List)</h3>
+      <ol>
+        <li>Complete the HTML file.</li>
+        <li>Validate with W3C Validator.</li>
+        <li>Save as <code>enhanced-form.html</code>.</li>
+        <li>Submit to your instructor.</li>
+      </ol>
+
+      <!-- Definition list -->
+      <h3>Definition List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Standard markup language for creating web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Used to style and design web pages.</dd>
+      </dl>
+    </section>
+
+    <!-- ==================== TABLE SECTION ==================== -->
+    <section>
+      <h2>Student Grades (Table)</h2>
+      <table>
+        <!-- Table caption adds context -->
+        <caption>Grades for Web Development Class</caption>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Assignment</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>Lists & Tables</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>Forms</td>
+            <td>B+</td>
+          </tr>
+          <tr>
+            <td>Carol</td>
+            <td>Media Embedding</td>
+            <td>A-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ==================== MEDIA SECTION ==================== -->
+    <section>
+      <h2>Media Examples</h2>
+
+      <!-- Image with caption -->
+      <figure>
+        <img src="https://via.placeholder.com/400x200" alt="Placeholder Example" width="400">
+        <figcaption>Sample Image (Placeholder)</figcaption>
+      </figure>
+
+      <!-- Audio player -->
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Video player -->
+      <video controls width="400">
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+
+    <!-- ==================== FORM SECTION ==================== -->
+    <section>
+      <h2>Student Registration Form</h2>
+      <!-- Form with validation attributes -->
+      <form action="#" method="post">
+        
+        <!-- Personal Information fieldset -->
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <!-- Required text input with minlength -->
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+          <!-- Email input with HTML5 validation -->
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+          <!-- Date input -->
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </fieldset>
+
+        <!-- Account Details fieldset -->
+        <fieldset>
+          <legend>Account Details</legend>
+
+          <!-- Pattern attribute ensures only letters, numbers, underscores -->
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required pattern="[A-Za-z0-9_]{5,15}" placeholder="5-15 chars, letters/numbers/underscores">
+
+          <!-- Password input with minlength -->
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6" placeholder="At least 6 characters">
+
+          <!-- Confirm password (no JS, just required input) -->
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </fieldset>
+
+        <!-- Preferences fieldset -->
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <!-- Select dropdown -->
+          <label for="course">Course Selection:</label>
+          <select id="course" name="course" required>
+            <option value="">--Choose a course--</option>
+            <option value="html">HTML5 Basics</option>
+            <option value="css">CSS Styling</option>
+            <option value="js">JavaScript</option>
+          </select>
+
+          <!-- Radio buttons -->
+          <label>Mode of Study:</label>
+          <input type="radio" id="online" name="mode" value="online" required>
+          <label for="online">Online</label>
+          <input type="radio" id="onsite" name="mode" value="onsite">
+          <label for="onsite">Onsite</label>
+
+          <!-- Checkbox -->
+          <label for="newsletter">
+            <input type="checkbox" id="newsletter" name="newsletter" checked>
+            Subscribe to newsletter
+          </label>
+        </fieldset>
+
+        <!-- Additional Info fieldset -->
+        <fieldset>
+          <legend>Additional Info</legend>
+
+          <!-- Textarea input -->
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Your comments..."></textarea>
+        </fieldset>
+
+        <!-- Submit button -->
+        <input type="submit" value="Register">
+      </form>
+    </section>
+  </main>
+
+  <!-- Page Footer -->
+  <footer>
+    <p>&copy; 2025 Enhanced HTML5 Assignment</p>
+  </footer>
+</body>
+</html>
